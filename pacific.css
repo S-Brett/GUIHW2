@@ -1,0 +1,186 @@
+
+/* Set each element to block by default  */
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+	display: block;
+}
+
+/* Set the background of the page to the img
+   I could also accomplish the same effect with the linear-gradient */
+body {
+	/*background-image: linear-gradient(to bottom, white, blue);*/
+	background-image: url("ptrbackground.jpg");
+	background-repeat: repeat;
+
+	color: #666666;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This sets the wrapper to white to pop it out of the body
+   and uses relative pos to set up it's children */
+div#wrapper{
+	background-color: white;
+	margin: auto;
+
+	position: relative;
+	width: 80%;
+	min-width: 600px;
+	padding-bottom: 25px;
+
+	height: 100%;
+}
+
+/* Nothing gancy here, just stretching it across it's parent 
+   and using z indexing to bring it to the front */
+div#wrapper header {
+	padding: 0;
+	margin: 0;
+
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	/*background-color: orangered;*/
+
+	z-index: 1000;
+
+	color: white;
+	background-image: url("sunset.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-color: #003;
+}
+
+/* I had issues with the header h1 so I set it to top 0  */
+div#wrapper header h1 {
+	margin-top: 0px;
+}
+
+/* The nav implementation was pretty straight forward.
+   The interesting this I do is make the bar background
+   abosulte and 100% height to fill the side, which is hidden
+   under the header z index. */
+div#wrapper nav {
+	float: left;
+	background-color: lightblue;
+	width: 200px;
+	height: 100%;
+	position: absolute;
+
+	/*position: absolute;*/
+	/*height:60%;*/
+}
+
+div#wrapper nav ul {
+	margin-top: 70px;
+	margin-left: -10px;
+	font-size: 1.2em;
+	padding-left: 50px;
+	list-style: none;
+	font-weight: 600;
+
+}
+
+div#wrapper nav ul li {
+	margin-bottom: 5px;
+}
+
+div#wrapper nav a {
+	color: #000;
+	text-decoration: none;
+}
+
+div#wrapper nav a:hover {
+	color: #FFF;
+}
+
+/* END OF NAV  */
+
+
+/* I had to get sneaky and use floating to get the effect I wanted
+   for the content */
+div#wrapper div#content {
+	margin-left: 225px;
+}
+
+div#wrapper div#content ul {
+	display: block;
+}
+
+div#wrapper div#content img {
+	/*display: inline-block;*/
+	float: left;
+	display: block;
+	margin-top: 25px;
+	margin-right: 25px;
+}
+div#wrapper div#content p {
+	margin-top: 50px;
+}
+
+div#wrapper div#content p span.resort {
+	font-weight: 1000;
+	color: slateblue;
+}
+
+div#wrapper div#content ul li {
+	list-style-image: url('marker.gif');
+}
+
+div#wrapper footer {
+	margin-left: 225px;
+	margin-top: 25px;
+
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+div#wrapper div#content div#contact span.resort{
+	/*font-weight: 800;*/
+	font-weight: bold;
+	color: slateblue;
+	/*font-size: 90%;*/
+}
+
+/* This is my attempt at adding the pin-it button to the image  */
+div#content img{
+	behavior: url(//assets.pinterest.com/js/pinit.js);
+}
+
+/* Just a small assortement of self-explanitory stylings */
+nav ul {
+	font-size: 1.2em;
+}
+
+nav a:visited {
+	color: #344873;
+}
+
+nav a:hover {
+	color: #FFFFFF;
+}
+
+h1 {
+	margin-bottom: 0;
+	padding: 10px;
+}
+
+h2 {
+	color: #3399CC;
+}
+
+h1, h2 {
+	font-family: Georgia, "Times New Roman", serif;
+}
+/*
+#contact {
+	font-size: 90%;
+}
+*/
+dt {
+	color: #000033;
+}
+
+footer {
+	
+}
+
+
